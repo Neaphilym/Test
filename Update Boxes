@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#updateboxes {
+width: auto;
+height: auto;
+position:fixed;
+float:left;
+display:inline-block;
+top:120px; /* --- MOVE THE TAB UP OR DOWN HERE ---*/
+left: 30px; /* --- MOVE THE TAB TO THE LEFT OR TO THE RIGHT HERE ---*/
+}
+
+#updateboxes a{
+color:#b6b6b6
+font-size:9px; /* --- CHANGE THE LINK FONT SIZE HERE ---*/
+text-decoration:none;
+-webkit-transition: all 0.5s ease-in-out;
+-moz-transition: all 0.5s ease-in-out;
+-o-transition: all 0.5s ease-in-out;
+transition: all 0.5s ease-in-out;
+}
+
+#updateboxes a:hover{
+color:#000000;
+font-size:9px; /* --- CHANGE THE LINK FONT SIZE HERE ---*/
+-webkit-transition: all 0.5s ease-in-out;
+-moz-transition: all 0.5s ease-in-out;
+-o-transition: all 0.5s ease-in-out;
+transition: all 0.5s ease-in-out;
+}
+
+/* --- UPDATES TAB BOX 1 ---*/
+
+#updatelines1 {
+width: 25px;
+height: 25px;
+display: block;
+opacity:1;
+}
+
+#updateline1 {
+width: 23px;
+height: 5px;
+display: block;
+opacity:1;
+background-color:{color:basic grey};
+transform:rotate(45deg);
+-ms-transform:rotate(45deg);
+-webkit-transform:rotate(45deg);
+-webkit-transition: all 0.5s ease-in-out;
+-moz-transition: all 0.5s ease-in-out;
+-o-transition: all 0.5s ease-in-out;
+transition: all 0.5s ease-in-out;
+}
+
+#updatelines1:hover #updateline1 {
+transform:rotate(90deg);
+-ms-transform:rotate(90deg);
+-webkit-transform:rotate(90deg);
+-webkit-transition: all 0.5s ease-in-out;
+-moz-transition: all 0.5s ease-in-out;
+-o-transition: all 0.5s ease-in-out;
+transition: all 0.5s ease-in-out;
+}
+
+#updateline2 {
+width: 23px;
+height: 5px;
+display: block;
+opacity:1;
+margin-left:1px;
+margin-top:-5px;
+background-color:{color:basic grey};
+transform:rotate(135deg);
+-ms-transform:rotate(135deg);
+-webkit-transform:rotate(135deg);
+-webkit-transition: all 0.5s ease-in-out;
+-moz-transition: all 0.5s ease-in-out;
+-o-transition: all 0.5s ease-in-out;
+transition: all 0.5s ease-in-out;
+}
+
+#updatelines1:hover #updateline2 {
+transform:rotate(90deg);
+-ms-transform:rotate(90deg);
+-webkit-transform:rotate(90deg);
+-webkit-transition: all 0.5s ease-in-out;
+-moz-transition: all 0.5s ease-in-out;
+-o-transition: all 0.5s ease-in-out;
+transition: all 0.5s ease-in-out;
+}
+
+#updatebox1 {
+width: 0px;
+height: 0px;
+display: inline-block;
+float:left;
+opacity:0;
+margin-top:-5px;
+letter-spacing:1px;
+margin-left:13px;
+font-size:9px; /* --- CHANGE THE CONTENT´S FONT SIZE HERE ---*/
+line-height:110%; 
+overflow:hidden;
+font-family:calibri; /* --- CHANGE THE CONTENT´S FONT HERE ---*/
+border-top:5px solid {color:basic grey};
+text-transform:uppercase;
+text-align:left;
+color:#000000;
+-webkit-transition: all 0.5s ease-in-out;
+-moz-transition: all 0.5s ease-in-out;
+-o-transition: all 0.5s ease-in-out;
+transition: all 0.5s ease-in-out;
+}
+
+#updatelines1:hover #updatebox1 {
+opacity:1;
+height:200px; /* --- CHANGE THE CONTENT´S HEIGHT HERE ---*/
+width: 130px; /* --- CHANGE THE CONTENT´S WIDTH HERE ---*/
+padding-left:18px;
+padding-right:5px;
+padding-bottom:5px;
+padding-top:5px;
+-webkit-transition: all 0.5s ease-in-out;
+-moz-transition: all 0.5s ease-in-out;
+-o-transition: all 0.5s ease-in-out;
+transition: all 0.5s ease-in-out;
+}
+
+/* --- UPDATES TAB BOX 2 ---*/
+
+#updatelines2 {
+width: 25px;
+height: 25px;
+display: block;
+opacity:1;
+}
+
+#updateline3 {
+width: 23px;
+height: 5px;
+display: block;
+opacity:1;
+margin-top:10px;
+background-color:{color:box 2};
+transform:rotate(45deg);
+-ms-transform:rotate(45deg);
+-webkit-transform:rotate(45deg);
+-webkit-transition: all 0.5s ease-in-out;
+-moz-transition: all 0.5s ease-in-out;
+-o-transition: all 0.5s ease-in-out;
+transition: all 0.5s ease-in-out;
+}
+
+#updatelines2:hover #updateline3 {
+transform:rotate(90deg);
+-ms-transform:rotate(90deg);
+-webkit-transform:rotate(90deg);
+-webkit-transition: all 0.5s ease-in-out;
+-moz-transition: all 0.5s ease-in-out;
+-o-transition: all 0.5s ease-in-out;
+transition: all 0.5s ease-in-out;
+}
+
+#updateline4 {
+width: 23px;
+height: 5px;
+display: block;
+opacity:1;
+margin-left:1px;
+margin-top:-5px;
+background-color:{color:box 2};
+transform:rotate(135deg);
+-ms-transform:rotate(135deg);
+-webkit-transform:rotate(135deg);
+-webkit-transition: all 0.5s ease-in-out;
+-moz-transition: all 0.5s ease-in-out;
+-o-transition: all 0.5s ease-in-out;
+transition: all 0.5s ease-in-out;
+}
+
+#updatelines2:hover #updateline4 {
+transform:rotate(90deg);
+-ms-transform:rotate(90deg);
+-webkit-transform:rotate(90deg);
+-webkit-transition: all 0.5s ease-in-out;
+-moz-transition: all 0.5s ease-in-out;
+-o-transition: all 0.5s ease-in-out;
+transition: all 0.5s ease-in-out;
+}
+
+#updatebox2 {
+width: 0px;
+height: 0px;
+display: inline-block;
+float:left;
+opacity:0;
+margin-top:-5px;
+letter-spacing:1px;
+margin-left:13px;
+font-size:9px; /* --- CHANGE THE CONTENT´S FONT SIZE HERE ---*/
+line-height:110%; 
+overflow:hidden;
+font-family:calibri; /* --- CHANGE THE CONTENT´S FONT HERE ---*/
+border-top:5px solid {color:box 2};
+text-transform:uppercase;
+text-align:left;
+color:#000000;
+-webkit-transition: all 0.5s ease-in-out;
+-moz-transition: all 0.5s ease-in-out;
+-o-transition: all 0.5s ease-in-out;
+transition: all 0.5s ease-in-out;
+}
+
+#updatelines2:hover #updatebox2 {
+opacity:1;
+height:200px; /* --- CHANGE THE CONTENT´S HEIGHT HERE ---*/
+width: 130px; /* --- CHANGE THE CONTENT´S WIDTH HERE ---*/
+padding-left:18px;
+padding-right:5px;
+padding-bottom:5px;
+padding-top:5px;
+-webkit-transition: all 0.5s ease-in-out;
+-moz-transition: all 0.5s ease-in-out;
+-o-transition: all 0.5s ease-in-out;
+transition: all 0.5s ease-in-out;
+}
+
+/* --- UPDATES TAB BOX 3 ---*/
+
+#updatelines3 {
+width: 25px;
+height: 25px;
+display: block;
+opacity:1;
+}
+
+#updateline5 {
+width: 23px;
+height: 5px;
+display: block;
+opacity:1;
+margin-top:10px;
+background-color:{color:box 3};
+transform:rotate(45deg);
+-ms-transform:rotate(45deg);
+-webkit-transform:rotate(45deg);
+-webkit-transition: all 0.5s ease-in-out;
+-moz-transition: all 0.5s ease-in-out;
+-o-transition: all 0.5s ease-in-out;
+transition: all 0.5s ease-in-out;
+}
+
+#updatelines3:hover #updateline5 {
+transform:rotate(90deg);
+-ms-transform:rotate(90deg);
+-webkit-transform:rotate(90deg);
+-webkit-transition: all 0.5s ease-in-out;
+-moz-transition: all 0.5s ease-in-out;
+-o-transition: all 0.5s ease-in-out;
+transition: all 0.5s ease-in-out;
+}
+
+#updateline6 {
+width: 23px;
+height: 5px;
+display: block;
+opacity:1;
+margin-left:1px;
+margin-top:-5px;
+background-color:{color:box 3};
+transform:rotate(135deg);
+-ms-transform:rotate(135deg);
+-webkit-transform:rotate(135deg);
+-webkit-transition: all 0.5s ease-in-out;
+-moz-transition: all 0.5s ease-in-out;
+-o-transition: all 0.5s ease-in-out;
+transition: all 0.5s ease-in-out;
+}
+
+#updatelines3:hover #updateline6 {
+transform:rotate(90deg);
+-ms-transform:rotate(90deg);
+-webkit-transform:rotate(90deg);
+-webkit-transition: all 0.5s ease-in-out;
+-moz-transition: all 0.5s ease-in-out;
+-o-transition: all 0.5s ease-in-out;
+transition: all 0.5s ease-in-out;
+}
+
+#updatebox3 {
+width: 0px;
+height: 0px;
+display: inline-block;
+float:left;
+opacity:0;
+margin-top:-5px;
+letter-spacing:1px;
+margin-left:13px;
+font-size:9px; /* --- CHANGE THE CONTENT´S FONT SIZE HERE ---*/
+line-height:110%; 
+overflow:hidden;
+font-family:calibri; /* --- CHANGE THE CONTENT´S FONT HERE ---*/
+border-top:5px solid {color:box 3};
+text-transform:uppercase;
+text-align:left;
+color:#000000;
+-webkit-transition: all 0.5s ease-in-out;
+-moz-transition: all 0.5s ease-in-out;
+-o-transition: all 0.5s ease-in-out;
+transition: all 0.5s ease-in-out;
+}
+
+#updatelines3:hover #updatebox3 {
+opacity:1;
+height:200px; /* --- CHANGE THE CONTENT´S HEIGHT HERE ---*/
+width: 130px; /* --- CHANGE THE CONTENT´S WIDTH HERE ---*/
+padding-left:18px;
+padding-right:5px;
+padding-bottom:5px;
+padding-top:5px;
+-webkit-transition: all 0.5s ease-in-out;
+-moz-transition: all 0.5s ease-in-out;
+-o-transition: all 0.5s ease-in-out;
+transition: all 0.5s ease-in-out;
+}
+
+/* --- UPDATES TAB BOX 4 ---*/
+
+#updatelines4 {
+width: 25px;
+height: 25px;
+display: block;
+opacity:1;
+}
+
+#updateline7 {
+width: 23px;
+height: 5px;
+display: block;
+opacity:1;
+margin-top:10px;
+background-color:{color:box 4};
+transform:rotate(45deg);
+-ms-transform:rotate(45deg);
+-webkit-transform:rotate(45deg);
+-webkit-transition: all 0.5s ease-in-out;
+-moz-transition: all 0.5s ease-in-out;
+-o-transition: all 0.5s ease-in-out;
+transition: all 0.5s ease-in-out;
+}
+
+#updatelines4:hover #updateline7 {
+transform:rotate(90deg);
+-ms-transform:rotate(90deg);
+-webkit-transform:rotate(90deg);
+-webkit-transition: all 0.5s ease-in-out;
+-moz-transition: all 0.5s ease-in-out;
+-o-transition: all 0.5s ease-in-out;
+transition: all 0.5s ease-in-out;
+}
+
+#updateline8 {
+width: 23px;
+height: 5px;
+display: block;
+opacity:1;
+margin-left:1px;
+margin-top:-5px;
+background-color:{color:box 4};
+transform:rotate(135deg);
+-ms-transform:rotate(135deg);
+-webkit-transform:rotate(135deg);
+-webkit-transition: all 0.5s ease-in-out;
+-moz-transition: all 0.5s ease-in-out;
+-o-transition: all 0.5s ease-in-out;
+transition: all 0.5s ease-in-out;
+}
+
+#updatelines4:hover #updateline8 {
+transform:rotate(90deg);
+-ms-transform:rotate(90deg);
+-webkit-transform:rotate(90deg);
+-webkit-transition: all 0.5s ease-in-out;
+-moz-transition: all 0.5s ease-in-out;
+-o-transition: all 0.5s ease-in-out;
+transition: all 0.5s ease-in-out;
+}
+
+#updatebox4 {
+width: 0px;
+height: 0px;
+display: inline-block;
+float:left;
+opacity:0;
+margin-top:-5px;
+letter-spacing:1px;
+margin-left:13px;
+font-size:9px; /* --- CHANGE THE CONTENT´S FONT SIZE HERE ---*/
+line-height:110%; 
+overflow:hidden;
+font-family:calibri; /* --- CHANGE THE CONTENT´S FONT HERE ---*/
+border-top:5px solid {color:box 4};
+text-transform:uppercase;
+text-align:left;
+color:#000000;
+-webkit-transition: all 0.5s ease-in-out;
+-moz-transition: all 0.5s ease-in-out;
+-o-transition: all 0.5s ease-in-out;
+transition: all 0.5s ease-in-out;
+}
+
+#updatelines4:hover #updatebox4 {
+opacity:1;
+height:200px; /* --- CHANGE THE CONTENT´S HEIGHT HERE ---*/
+width: 130px; /* --- CHANGE THE CONTENT´S WIDTH HERE ---*/
+padding-left:18px;
+padding-right:5px;
+padding-bottom:5px;
+padding-top:5px;
+-webkit-transition: all 0.5s ease-in-out;
+-moz-transition: all 0.5s ease-in-out;
+-o-transition: all 0.5s ease-in-out;
+transition: all 0.5s ease-in-out;
+}
+
+/* --- UPDATES TAB BOX 5 ---*/
+
+#updatelines5 {
+width: 25px;
+height: 25px;
+display: block;
+opacity:1;
+}
+
+#updateline9 {
+width: 23px;
+height: 5px;
+display: block;
+opacity:1;
+margin-top:10px;
+background-color:{color:box 5};
+transform:rotate(45deg);
+-ms-transform:rotate(45deg);
+-webkit-transform:rotate(45deg);
+-webkit-transition: all 0.5s ease-in-out;
+-moz-transition: all 0.5s ease-in-out;
+-o-transition: all 0.5s ease-in-out;
+transition: all 0.5s ease-in-out;
+}
+
+#updatelines5:hover #updateline9 {
+transform:rotate(90deg);
+-ms-transform:rotate(90deg);
+-webkit-transform:rotate(90deg);
+-webkit-transition: all 0.5s ease-in-out;
+-moz-transition: all 0.5s ease-in-out;
+-o-transition: all 0.5s ease-in-out;
+transition: all 0.5s ease-in-out;
+}
+
+#updateline10 {
+width: 23px;
+height: 5px;
+display: block;
+opacity:1;
+margin-left:1px;
+margin-top:-5px;
+background-color:{color:box 5};
+transform:rotate(135deg);
+-ms-transform:rotate(135deg);
+-webkit-transform:rotate(135deg);
+-webkit-transition: all 0.5s ease-in-out;
+-moz-transition: all 0.5s ease-in-out;
+-o-transition: all 0.5s ease-in-out;
+transition: all 0.5s ease-in-out;
+}
+
+#updatelines5:hover #updateline10 {
+transform:rotate(90deg);
+-ms-transform:rotate(90deg);
+-webkit-transform:rotate(90deg);
+-webkit-transition: all 0.5s ease-in-out;
+-moz-transition: all 0.5s ease-in-out;
+-o-transition: all 0.5s ease-in-out;
+transition: all 0.5s ease-in-out;
+}
+
+#updatebox5 {
+width: 0px;
+height: 0px;
+display: inline-block;
+float:left;
+opacity:0;
+margin-top:-5px;
+letter-spacing:1px;
+margin-left:13px;
+font-size:9px; /* --- CHANGE THE CONTENT´S FONT SIZE HERE ---*/
+line-height:110%; 
+overflow:hidden;
+font-family:calibri; /* --- CHANGE THE CONTENT´S FONT HERE ---*/
+border-top:5px solid {color:box 5};
+text-transform:uppercase;
+text-align:left;
+color:#000000;
+-webkit-transition: all 0.5s ease-in-out;
+-moz-transition: all 0.5s ease-in-out;
+-o-transition: all 0.5s ease-in-out;
+transition: all 0.5s ease-in-out;
+}
+
+#updatelines5:hover #updatebox5 {
+opacity:1;
+height:200px; /* --- CHANGE THE CONTENT´S HEIGHT HERE ---*/
+width: 130px; /* --- CHANGE THE CONTENT´S WIDTH HERE ---*/
+padding-left:18px;
+padding-right:5px;
+padding-bottom:5px;
+padding-top:5px;
+-webkit-transition: all 0.5s ease-in-out;
+-moz-transition: all 0.5s ease-in-out;
+-o-transition: all 0.5s ease-in-out;
+transition: all 0.5s ease-in-out;
+}
+
+/* --- UPDATES TAB BOX 6 ---*/
+
+#updatelines25 {
+width: 25px;
+height: 25px;
+display: block;
+opacity:1;
+}
+
+#updateline29 {
+width: 23px;
+height: 5px;
+display: block;
+opacity:1;
+margin-top:10px;
+background-color:{color:box 6};
+transform:rotate(45deg);
+-ms-transform:rotate(45deg);
+-webkit-transform:rotate(45deg);
+-webkit-transition: all 0.5s ease-in-out;
+-moz-transition: all 0.5s ease-in-out;
+-o-transition: all 0.5s ease-in-out;
+transition: all 0.5s ease-in-out;
+}
+
+#updatelines25:hover #updateline29 {
+transform:rotate(90deg);
+-ms-transform:rotate(90deg);
+-webkit-transform:rotate(90deg);
+-webkit-transition: all 0.5s ease-in-out;
+-moz-transition: all 0.5s ease-in-out;
+-o-transition: all 0.5s ease-in-out;
+transition: all 0.5s ease-in-out;
+}
+
+#updateline210 {
+width: 23px;
+height: 5px;
+display: block;
+opacity:1;
+margin-left:1px;
+margin-top:-5px;
+background-color:{color:box 6};
+transform:rotate(135deg);
+-ms-transform:rotate(135deg);
+-webkit-transform:rotate(135deg);
+-webkit-transition: all 0.5s ease-in-out;
+-moz-transition: all 0.5s ease-in-out;
+-o-transition: all 0.5s ease-in-out;
+transition: all 0.5s ease-in-out;
+}
+
+#updatelines25:hover #updateline210 {
+transform:rotate(90deg);
+-ms-transform:rotate(90deg);
+-webkit-transform:rotate(90deg);
+-webkit-transition: all 0.5s ease-in-out;
+-moz-transition: all 0.5s ease-in-out;
+-o-transition: all 0.5s ease-in-out;
+transition: all 0.5s ease-in-out;
+}
+
+#updatebox25 {
+width: 0px;
+height: 0px;
+display: inline-block;
+float:left;
+opacity:0;
+margin-top:-5px;
+letter-spacing:1px;
+margin-left:13px;
+font-size:9px; /* --- CHANGE THE CONTENT´S FONT SIZE HERE ---*/
+line-height:110%; 
+overflow:hidden;
+font-family:calibri; /* --- CHANGE THE CONTENT´S FONT HERE ---*/
+border-top:5px solid {color:box 6};
+text-transform:uppercase;
+text-align:left;
+color:#000000;
+-webkit-transition: all 0.5s ease-in-out;
+-moz-transition: all 0.5s ease-in-out;
+-o-transition: all 0.5s ease-in-out;
+transition: all 0.5s ease-in-out;
+}
+
+#updatelines25:hover #updatebox25 {
+opacity:1;
+height:200px; /* --- CHANGE THE CONTENT´S HEIGHT HERE ---*/
+width: 130px; /* --- CHANGE THE CONTENT´S WIDTH HERE ---*/
+padding-left:18px;
+padding-right:5px;
+padding-bottom:5px;
+padding-top:5px;
+-webkit-transition: all 0.5s ease-in-out;
+-moz-transition: all 0.5s ease-in-out;
+-o-transition: all 0.5s ease-in-out;
+transition: all 0.5s ease-in-out;
+}
+</style>
+</head>
+
+<body>
+<div id="updateboxes">
+
+<div id="updatelines1">
+<div id="updateline1"></div>
+<div id="updateline2"></div>
+<div id="updatebox1">
+<div style="width:130px; height:12px; margin-left: 0px;
+border:1px #ffffff; line-height:12px;padding:1px; background-color:#6e6d6d";>
+<FONT COLOR=#FFFFFF><FONT size=1>{text:title box 1}</FONT></FONT></div></p> 
+{text:content box 1a}</p>
+{text:content box 1b}</p>
+<a href="http://neaphilym.tumblr.com/bio/">More</a></p>
+<div style="width:130px; height:12px; margin-left: 0px;
+border:1px #ffffff; line-height:12px;padding:1px; background-color:#6e6d6d";>
+<FONT COLOR=#FFFFFF><FONT size=1></FONT></FONT></div></p> 
+</div></div>
+
+<div id="updatelines2">
+<div id="updateline3"></div>
+<div id="updateline4"></div>  
+<div id="updatebox2">
+<div style="width:130px; height:12px; margin-left: 0px;
+border:1px #ffffff; line-height:12px;padding:1px; background-color:{color:box 2}";>
+<FONT COLOR=#FFFFFF><FONT size=1>{text:title box 2}</FONT></FONT></div></p> 
+{text:houses}</p>
+{text:wand} <a href="#?w=300" rel="wandanalysis" class="poplight" style="text-decoration:none">[x]</a></p>
+{text:patronus}</p>
+{text:quidditch team}</p>
+<a href="http://www.pottermore.com/en-us/profile/lumosblade19649">Pottermore</a></p>
+<div style="width:130px; height:12px; margin-left: 0px;
+border:1px #ffffff; line-height:12px;padding:1px; background-color:{color:box 2}";>
+<FONT COLOR=#FFFFFF><FONT size=1></FONT></FONT></div></p> 
+</div></div>
+
+<div id="updatelines3">
+<div id="updateline5"></div>
+<div id="updateline6"></div> 
+<div id="updatebox3">
+<div style="width:130px; height:12px; margin-left: 0px;
+border:1px #ffffff; line-height:12px;padding:1px; background-color:{color:box 3}";>
+<FONT COLOR=#FFFFFF><FONT size=1>{text:title box 3}</FONT></FONT></div></p> 
+{text:1st fandom}</p>
+{text:2nd fandom}</p>
+{text:3rd fandom}</p>
+{text:4th fandom}</p>
+{text:5th fandom}</p>
+{text:6th fandom}</p>
+<a href="#?w=300" rel="allfandoms" class="poplight" style="text-decoration:none">All</a></p>
+<div style="width:130px; height:12px; margin-left: 0px;
+border:1px #ffffff; line-height:12px;padding:1px; background-color:{color:box 3}";>
+<FONT COLOR=#FFFFFF><FONT size=1></FONT></FONT></div></p> 
+</div></div>
+
+<div id="updatelines4">
+<div id="updateline7"></div>
+<div id="updateline8"></div>
+<div id="updatebox4">
+<div style="width:130px; height:12px; margin-left: 0px;
+border:1px #ffffff; line-height:12px;padding:1px; background-color:{color:box 4}";>
+<FONT COLOR=#FFFFFF><FONT size=1>{text:title box 4}</FONT></FONT></div></p> 
+{text:1st otp}</p>
+{text:2nd otp}</p>
+{text:3rd otp}</p>
+{text:4th otp}</p>
+{text:5th otp}</p>
+{text:6th otp}</p>
+<div style="width:130px; height:12px; margin-left: 0px;
+border:1px #ffffff; line-height:12px;padding:1px; background-color:{color:box 4}";>
+<FONT COLOR=#FFFFFF><FONT size=1></FONT></FONT></div></p> 
+</div></div>
+
+<div id="updatelines5">
+<div id="updateline9"></div>
+<div id="updateline10"></div>
+<div id="updatebox5">
+<div style="width:130px; height:12px; margin-left: 0px;
+border:1px #ffffff; line-height:12px;padding:1px; background-color:{color:box 5}";>
+<FONT COLOR=#FFFFFF><FONT size=1>{text:title box 5}<a href="http://neaphilym.tumblr.com/astro" title="meaning"><font color="#ffffff">[x]</font></a></FONT></FONT></div></p>
+<b>Sun</b>, <b>Mercury</b>, <b>Vesta</b>: Libra</p>
+<b>Moon</b>: Pisces</p>
+<b>Rising</b>: Scorpio</p>
+<b>Venus</b>, <b>Ceres</b>: Leo</p>
+<b>Mars</b>, <b>Pluto</b>, <b>Chiron</b>, <b>Lilith</b>, <b>Junio</b>: Sagittarius</p>
+<b>Jupiter</b>, <b>Saturn</b>: Taurus</p>
+<b>Neptune</b>, <b>Uranus</b>: Aquarius</p>
+<b>Pallas</b>: Cancer</p>
+<b>Fortune</b>, <b>South node</b>: Aries</p>
+<div style="width:130px; height:12px; margin-left: 0px;
+border:1px #ffffff; line-height:12px;padding:1px; background-color:{color:box 5}";>
+<FONT COLOR=#FFFFFF><FONT size=1></FONT></FONT></div></p> 
+</div></div>
+
+<div id="updatelines25">
+<div id="updateline29"></div>
+<div id="updateline210"></div>
+<div id="updatebox25">
+<div style="width:130px; height:12px; margin-left: 0px;
+border:1px #ffffff; line-height:12px;padding:1px; background-color:{color:box 6}";>
+<FONT COLOR=#FFFFFF><FONT size=1>{text:title box 6}</FONT></FONT></div></p>
+<b>{text:book 1 title}</b> - {text:book 1 author}</p>
+<b>{text:book 2 title}</b> - {text:book 2 author}</p>
+<b>{text:book 3 title}</b> - {text:book 3 author}</p>
+<div style="width:130px; height:12px; margin-left: 0px;
+border:1px #ffffff; line-height:12px;padding:1px; background-color:{color:box 6}";>
+<FONT COLOR=#FFFFFF><FONT size=1></FONT></FONT></div></p> 
+</div></div>
+
+</div>
+</body>
+</html>
